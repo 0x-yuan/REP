@@ -1,0 +1,33 @@
+[project]
+name = "reasoning-trace-exposure"
+version = "1.0.0"
+description = "Official code for 'Hidden Thoughts Are Not Secret: Reasoning Trace Exposure in LLMs' (EMNLP 2026)"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dependencies = [
+    # prompt building + data loading
+    "datasets>=2.19",
+    "transformers>=4.50",
+    "python-dotenv>=1.0",
+    # scoring
+    "rouge-score>=0.1.2",
+    "math-verify>=0.5",
+    # inference farm + distillation orchestration (Modal-hosted)
+    "modal>=1.0",
+    # OpenRouter API harvest path (reasoning-channel victims)
+    "aiohttp>=3.9",
+]
+
+[project.optional-dependencies]
+# extras only needed to *run* GPU stages locally; the farm/engine install their
+# own pinned images on Modal, so these are not required for prompt building or scoring.
+train = ["torch>=2.7", "accelerate>=1.0"]
+dev = ["pytest>=8.0"]
+# DeepInfra backend + scoring tables
+api-backends = ["aiohttp>=3.9", "httpx>=0.27", "jinja2>=3.1", "pandas>=2.0", "pyarrow>=15", "huggingface-hub>=0.23"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "eval/tests", "downstream-finetune/tests"]
+
+[tool.uv]
+package = false

@@ -1,0 +1,5 @@
+condition,reveal_format,n_rows,struct_pct,R02,R01,R12,ans_match_pct
+(1) full code,bash fence + cat,500,81.4,0.2872,0.2699,0.5015,34.6
+(3) bare cmd,cat <file>,500,81.8,0.2786,0.2735,0.4412,34.8
+(2) no code,Reasoning:/Answer:,500,80.0,0.2521,0.2672,0.3535,34.6
+no-trigger,---,500,96.0,0.1618,0.3792,0.1321,38.6

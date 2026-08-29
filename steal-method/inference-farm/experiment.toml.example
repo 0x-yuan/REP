@@ -1,0 +1,30 @@
+# Per-experiment ModelConfig overrides. Copy to `experiment.toml` and edit.
+# When the slave deploys, the host reads this file, encodes it as
+# EXPERIMENT_OVERRIDES_JSON, and ships that env var into the container.
+# So the host CFG and container CFG are always in lockstep.
+#
+# Any field on `slave.registry.ModelConfig` is a valid override key.
+# Unknown keys are rejected at deploy time (`get_config()` raises).
+#
+# Example: shorten output for a fast smoke run on 8B at 64K context.
+
+# [models.qwen3-8b]
+# default_max_tokens = 4096
+# context_length = 65536
+# max_running_requests = 32
+# chunked_prefill_size = 8192
+
+# Example: switch 14B to TP=2 if you want to revert the H200×1 retune.
+# [models.qwen3-14b]
+# gpu = "H200:2"
+# tp = 2
+# max_running_requests = 64
+# cuda_graph_max_bs = 64
+# cuda_graph_bs = [1, 2, 4, 8, 16, 32, 48, 64]
+
+# Example: drop YaRN extension for short-context experiments. Setting
+# rope_yarn_factor to 0.0 disables the YaRN override entirely (the slave
+# checks `if cfg.rope_yarn_factor:` before applying the rope_scaling block).
+# [models.qwen3-1p7b]
+# context_length = 32768
+# rope_yarn_factor = 0.0

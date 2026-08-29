@@ -1,0 +1,6 @@
+student,recipe,math500_ep1,math500_ep2,math500_ep3,math500_ep4,math500_ep5,math500_best
+Qwen2.5-7B-Instruct,base (no distill),,,,,,0.709
+Qwen2.5-14B-Instruct,base (no distill),,,,,,0.66
+Qwen2.5-14B-Instruct,REP (10k Qwen3-14B REP traces),0.718,0.737,0.79,0.806,0.813,0.813
+Qwen2.5-32B-Instruct,base (no distill),,,,,,0.782
+Qwen2.5-32B-Instruct,REP (10k Qwen3-14B REP traces),0.795,0.818,0.847,0.875,0.871,0.875

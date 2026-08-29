@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Hidden Thoughts Are Not Secret: Reasoning-Trace Exposure in LLMs"
+identifiers:
+  - type: other
+    value: "arXiv:2606.00642"
+url: "https://arxiv.org/abs/2606.00642"
+repository-code: "https://github.com/0x-yuan/REP"
+authors:
+  - family-names: Lu
+    given-names: Yu-An
+  - family-names: Tsai
+    given-names: Ci-Yang
+  - family-names: Tsai
+    given-names: Yu-Lin
+  - family-names: Popa
+    given-names: Raluca Ada
+  - family-names: Yu
+    given-names: Chia-Mu
+preferred-citation:
+  type: conference-paper
+  title: "Hidden Thoughts Are Not Secret: Reasoning-Trace Exposure in LLMs"
+  authors:
+    - family-names: Lu
+      given-names: Yu-An
+    - family-names: Tsai
+      given-names: Ci-Yang
+    - family-names: Tsai
+      given-names: Yu-Lin
+    - family-names: Popa
+      given-names: Raluca Ada
+    - family-names: Yu
+      given-names: Chia-Mu
+  collection-title: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP)"
+  year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:2606.00642"

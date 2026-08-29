@@ -1,0 +1,24 @@
+cell,metric,our_sglang,deepinfra,n
+Qwen3-14B  V3-K3  (0.9x short demo),"fidelity ROUGE-L(r2,ri) [all]",0.2883,0.3089,
+Qwen3-14B  V3-K3  (0.9x short demo),fidelity [DI non-truncated],,0.3236,378.0
+Qwen3-14B  V3-K3  (0.9x short demo),fidelity [paired common idx],0.2883,0.3089,500.0
+Qwen3-14B  V3-K3  (0.9x short demo),fidelity [both-structural common],0.3331,0.3301,357.0
+Qwen3-14B  V3-K3  (0.9x short demo),structural_success,0.782,0.854,
+Qwen3-14B  V3-K3  (0.9x short demo),r1r2_rouge_l (self-echo),0.482,0.6292,
+Qwen3-14B  V3-K3  (0.9x short demo),DI truncation rate,,0.244,
+Qwen3-32B  V3-K3  (0.9x short demo),"fidelity ROUGE-L(r2,ri) [all]",0.2886,0.2701,
+Qwen3-32B  V3-K3  (0.9x short demo),fidelity [DI non-truncated],,0.2844,384.0
+Qwen3-32B  V3-K3  (0.9x short demo),fidelity [paired common idx],0.2886,0.2807,305.0
+Qwen3-32B  V3-K3  (0.9x short demo),fidelity [both-structural common],0.2946,0.2866,279.0
+Qwen3-32B  V3-K3  (0.9x short demo),structural_success,0.9967,0.846,
+Qwen3-32B  V3-K3  (0.9x short demo),r1r2_rouge_l (self-echo),0.6397,0.457,
+Qwen3-32B  V3-K3  (0.9x short demo),DI truncation rate,,0.232,
+"Qwen3-32B  V3-K3  (long demo, high-trunc ref)","fidelity ROUGE-L(r2,ri) [all]",0.2886,0.2601,
+"Qwen3-32B  V3-K3  (long demo, high-trunc ref)",fidelity [DI non-truncated],,0.2706,287.0
+"Qwen3-32B  V3-K3  (long demo, high-trunc ref)",fidelity [paired common idx],0.2886,0.269,305.0
+"Qwen3-32B  V3-K3  (long demo, high-trunc ref)",fidelity [both-structural common],0.3147,0.2714,228.0
+"Qwen3-32B  V3-K3  (long demo, high-trunc ref)",structural_success,0.9967,0.648,
+"Qwen3-32B  V3-K3  (long demo, high-trunc ref)",r1r2_rouge_l (self-echo),0.6397,0.3428,
+"Qwen3-32B  V3-K3  (long demo, high-trunc ref)",DI truncation rate,,0.426,
+Qwen3-14B  V3-K3  (0.9x short demo),"paired delta DI-OUR both-structural, 95% bootstrap CI [-0.013,+0.006]",0.3331,0.3301,357.0
+Qwen3-32B  V3-K3  (0.9x short demo),"paired delta DI-OUR both-structural, 95% bootstrap CI [-0.020,+0.005]",0.2946,0.2866,279.0

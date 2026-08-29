@@ -1,0 +1,54 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+modal.toml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Data / model artifacts (resolved from the Hub at run time; never committed)
+*.jsonl
+*.jsonl.gz
+*.parquet
+*.arrow
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+
+# Inference-farm + training working dirs
+**/inbox/*.jsonl
+**/outbox/
+**/results/
+**/ckpts/
+**/checkpoints/
+**/state/
+**/launches/*.json
+
+# Logs / OS
+*.log
+logs/
+.DS_Store
+
+# Vendored small datasets — committed on purpose (test set, shadow shot pool,
+# and the small permissive benchmark splits) so the artifact is self-contained.
+!/data/
+!/data/**
+!paper/*.pdf
+
+# Release payload — committed on purpose
+!/results/
+!/results/**
+!/downstream-finetune/engine/s1/
+!/downstream-finetune/engine/s1/**
+/downstream-finetune/engine/s1/eval/
+/results/__pycache__/
+/downstream-finetune/engine/s1/visuals/

@@ -1,0 +1,73 @@
+# B200 overrides for the cross-victim experiment (paper Table 4).
+#
+# Per-victim context/max_tokens: context=131k (Qwen3 YaRN native), max_tokens=32k.
+#
+# The registry default attention_backend="fa3" crash-loops on B200 (SM 100).
+# Override to "flashinfer" for Qwen3 dense / MoE; "triton" for gpt-oss
+# (no flashinfer support) and Qwen3.6-27B (hybrid GDN: per SGLang docs,
+# Blackwell GDN is constrained to {triton, trtllm_mha, fa4}; we pick
+# triton for consistency with gpt-oss).
+#
+# Workload sizing:
+#   - V3 prefix: ~41k tokens (3 demos × ~13k)
+#   - test question (OpenThoughts-500): ~0.5–2k
+#   - max output: 32k tokens (long traces can exceed 20k)
+#   - 41k + 2k + 32k + slack → context_length=131072 (Qwen3 YaRN native)
+#   - With concurrent_max_inputs=1 (set in registry.py canonical),
+#     max_running_requests doesn't need to be tight.
+
+[models.qwen3-14b]
+gpu = "B200"
+tp = 1
+attention_backend = "flashinfer"
+context_length = 131072
+default_max_tokens = 32000
+
+[models.qwen3-32b]
+gpu = "B200"
+tp = 1
+attention_backend = "flashinfer"
+context_length = 131072
+default_max_tokens = 32000
+max_running_requests = 16
+cuda_graph_max_bs = 16
+cuda_graph_bs = [1, 2, 4, 8, 16]
+
+[models.qwen3p6-27b]
+gpu = "B200"
+tp = 1
+# hybrid GDN model: SGLang Blackwell constraint = {triton, trtllm_mha, fa4}
+attention_backend = "triton"
+context_length = 131072
+default_max_tokens = 32000
+
+[models.gpt-oss-20b]
+gpu = "B200"
+tp = 1
+# gpt-oss only supports {triton, trtllm_mha, fa3, fa4, ascend, aiter}; flashinfer rejected.
+# fa3 crashes on B200 SM 100; trtllm_mha rejected on some SM_120 setups; triton is safest.
+attention_backend = "triton"
+context_length = 131072
+default_max_tokens = 32000
+max_running_requests = 16
+cuda_graph_max_bs = 16
+cuda_graph_bs = [1, 2, 4, 8, 16]
+
+[models.qwen3-235b-a22b]
+gpu = "B200:4"
+tp = 4
+attention_backend = "flashinfer"
+context_length = 131072
+default_max_tokens = 32000
+
+# gemma-4-31b is optional and off by default. Keeping the entry here in
+# case a cross-victim run needs it (cheap; only consulted if a
+# `gemma-4-31b__*.jsonl` inbox file shows up).
+[models.gemma-4-31b]
+gpu = "B200"
+tp = 1
+# Per SGLang official Gemma-4 cookbook: triton is auto-selected for Gemma 4.
+attention_backend = "triton"
+context_length = 65536
+default_max_tokens = 20000
+sglang_image = "lmsysorg/sglang:v0.5.12-cu130-runtime"

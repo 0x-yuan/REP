@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+logs/
+.DONE
+final_results.json
+README.HF.md

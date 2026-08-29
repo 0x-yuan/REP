@@ -1,0 +1,37 @@
+# Runtime batch I/O — these dirs are populated by run_pipeline.sh
+inbox/*
+result/*
+processed/*
+launches/*
+!inbox/.gitkeep
+!result/.gitkeep
+!processed/.gitkeep
+!launches/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Modal / local state
+.modal/
+*.log
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials*

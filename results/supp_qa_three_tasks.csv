@@ -1,0 +1,41 @@
+category,dataset,victim,supervision,score_pct,epoch
+Mathematical,MATH500,Qwen3-14B,Answer only,25.5,5.0
+Mathematical,MATH500,Qwen3-14B,REP,72.4,5.0
+Mathematical,MATH500,Qwen3-14B,Oracle,70.3,5.0
+Mathematical,MATH500,Qwen3-32B,Answer only,25.4,5.0
+Mathematical,MATH500,Qwen3-32B,REP,73.9,5.0
+Mathematical,MATH500,Qwen3-32B,Oracle,70.0,5.0
+Competition Math,AIME24,Qwen3-14B,Answer only,1.1,5.0
+Competition Math,AIME24,Qwen3-14B,REP,12.2,5.0
+Competition Math,AIME24,Qwen3-14B,Oracle,14.4,5.0
+Competition Math,AIME24,Qwen3-32B,Answer only,0.0,5.0
+Competition Math,AIME24,Qwen3-32B,REP,13.3,5.0
+Competition Math,AIME24,Qwen3-32B,Oracle,16.7,5.0
+Code,LiveCodeBench,Qwen3-14B,Answer only,17.6,5.0
+Code,LiveCodeBench,Qwen3-14B,REP,18.3,5.0
+Code,LiveCodeBench,Qwen3-14B,Oracle,14.7,5.0
+Code,LiveCodeBench,Qwen3-32B,Answer only,16.8,5.0
+Code,LiveCodeBench,Qwen3-32B,REP,16.5,5.0
+Code,LiveCodeBench,Qwen3-32B,Oracle,15.8,5.0
+Commonsense,StrategyQA,Qwen3-14B,Answer only,71.6,5.0
+Commonsense,StrategyQA,Qwen3-14B,REP,72.9,5.0
+Commonsense,StrategyQA,Qwen3-14B,Oracle,72.9,5.0
+Commonsense,StrategyQA,Qwen3-32B,Answer only,72.3,5.0
+Commonsense,StrategyQA,Qwen3-32B,REP,77.0,5.0
+Commonsense,StrategyQA,Qwen3-32B,Oracle,75.0,5.0
+Symbolic,ProntoQA,Qwen3-14B,Answer only,100.0,5.0
+Symbolic,ProntoQA,Qwen3-14B,REP,100.0,5.0
+Symbolic,ProntoQA,Qwen3-14B,Oracle,99.7,5.0
+Symbolic,ProntoQA,Qwen3-32B,Answer only,100.0,5.0
+Symbolic,ProntoQA,Qwen3-32B,REP,100.0,5.0
+Symbolic,ProntoQA,Qwen3-32B,Oracle,100.0,5.0
+Multi-hop QA,HotpotQA (EM),Qwen3-14B,Answer only,63.0,5.0
+Multi-hop QA,HotpotQA (EM),Qwen3-14B,REP,67.3,5.0
+Multi-hop QA,HotpotQA (EM),Qwen3-14B,Oracle,62.7,5.0
+Multi-hop QA,HotpotQA (EM),Qwen3-32B,Answer only,64.7,5.0
+Multi-hop QA,HotpotQA (EM),Qwen3-32B,REP,67.3,5.0
+Multi-hop QA,HotpotQA (EM),Qwen3-32B,Oracle,63.3,5.0
+Commonsense,StrategyQA,--,Base Qwen2.5-7B-Instruct (no distill),70.3,
+Symbolic,ProntoQA,--,Base Qwen2.5-7B-Instruct (no distill),99.7,
+Multi-hop QA,HotpotQA (EM),--,Base Qwen2.5-7B-Instruct (no distill),56.7,
+Multi-hop QA,HotpotQA (F1),--,Base Qwen2.5-7B-Instruct (no distill),71.7,

@@ -1,0 +1,9 @@
+setting,wrapper_id,wrapper_name,k,n_rows,struct_pct,R02,R01,R12,ans_match_pct
+Baseline R (repeat),,no_trigger,0,500,96.0,0.1618,0.3792,0.1321,38.6
+Baseline C (simple CoT leakage),,simple_cot,0,500,86.8,0.1576,0.3331,0.118,36.8
+plain,V0,baseline_plain,3,500,69.2,0.2118,0.2381,0.1559,33.6
+shell,V1,shell_cat,3,500,79.4,0.2715,0.2699,0.4514,33.6
+Python REPL,V2,python_repl,3,500,85.0,0.2803,0.2766,0.4774,34.0
+markdown fence,V3,markdown_fence,3,500,78.2,0.2883,0.263,0.482,33.8
+Jupyter cell,V4,jupyter_cell,3,500,82.0,0.2785,0.273,0.4725,33.6
+agent tool,V5,agent_tool,3,500,83.0,0.2797,0.2775,0.4545,34.6

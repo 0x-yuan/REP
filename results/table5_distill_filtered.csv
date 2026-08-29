@@ -1,0 +1,6 @@
+category,victim,supervision,math500,aime24,aime25,jee_math_strict,jee_math_partial,lcb
+No distillation,--,--,71.0,8.9,2.2,32.2,35.9,15.8
+REP exposed trace,Qwen3-14B,"Exposed trace, all valid",72.4,12.2,13.3,33.5,38.9,18.3
+REP exposed trace,Qwen3-14B,"Exposed trace, answer-clean",75.8,14.4,13.3,35.2,39.5,19.0
+REP exposed trace,Qwen3-32B,"Exposed trace, all valid",73.9,13.3,13.3,38.1,42.2,16.5
+REP exposed trace,Qwen3-32B,"Exposed trace, answer-clean",72.8,14.4,17.8,36.4,41.1,15.8
